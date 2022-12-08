@@ -13,7 +13,7 @@ who want to get going quickly, e.g. when dealing with tree sequences in tutorial
 performing basic exploratory analysis. For more complex functionality, users are
 encouraged to develop their own functions. The [tutorials](https://tskit.dev/tutorials/)
 are a good place to develop an understanding: for support in developing your own
-functionality, to to contribute to this repository, you can ask the general
+functionality, or to contribute to this repository, you can ask the general
 [tskit community](https://tskit.dev/community/).
 
 Note that new versions of this library are not guaranteed to maintain
