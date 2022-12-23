@@ -44,6 +44,10 @@ def download(url, progress=True):
         disable=not progress,
     ) as t:
         tmp_fn, _ = urllib.request.urlretrieve(url, reporthook=t.update_to)
-        ts = tszip.decompress(tmp_fn) if url.endswith(".tsz") else tskit.load(tmp_fn)
+        try:
+            ts = tskit.load(tmp_fn)
+        except FileFormatError:
+            # could be a tsz file
+            ts = tszip.decompress(tmp_fn)
         urllib.request.urlcleanup() # Remove tmp_fn
     return ts
